@@ -13,44 +13,9 @@ use App\Http\Controllers\PesananController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/', function () {
     return view('welcome');
-});
-
-Route::get('/welcome', function () {
-    return view('welcome');
-});
-
-Route::get('/about', function () {
-    return view('/about');
-});
-
-Route::get('/service', function () {
-    return view('/service');
-});
-
-Route::get('/menu', function () {
-    return view('/menu');
-});
-
-Route::get('/reservasi', function() {
-    return view('/reservasi');
-});
-
-Route::get('/testimoni', function() {
-    return view('/testimoni');
-});
-
-Route::get('/wedding', function() {
-    return view('/wedding');
-});
-
-Route::get('/party', function() {
-    return view('/party');
-});
-
-Route::get('/meeting', function() {
-    return view('/meeting');
 });
 
 Route::get('/pesanan',[PesananController::class,'index']);
@@ -59,10 +24,42 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
+Route::middleware(['auth'])->group(function(){
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/welcome', function () {
+        return view('welcome');
+    });
+    
+    Route::get('/about', function () {
+        return view('/about');
+    });
+    
+    Route::get('/service', function () {
+        return view('/service');
+    });
+    
+    Route::get('/menu', function () {
+        return view('/menu');
+    });
+    
+    Route::get('/reservasi', function() {
+        return view('/reservasi');
+    });
+    
+    Route::get('/testimoni', function() {
+        return view('/testimoni');
+    });
+    
+    Route::get('/wedding', function() {
+        return view('/wedding');
+    });
+    
+    Route::get('/party', function() {
+        return view('/party');
+    });
+    
+    Route::get('/meeting', function() {
+        return view('/meeting');
+    });
+    
+});
