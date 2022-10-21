@@ -55,3 +55,14 @@ Route::get('/meeting', function() {
 
 Route::get('/pesanan',[PesananController::class,'index']);
 Route::post('/store',[PesananController::class,'store']);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
