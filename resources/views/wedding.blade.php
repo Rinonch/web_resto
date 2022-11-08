@@ -56,8 +56,17 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
                         <a href="/welcome" class="nav-item nav-link">Beranda</a>
-                        <!-- <a href="/about" class="nav-item nav-link">Tentang</a> -->
-                        <a href="/service" class="nav-item nav-link">Layanan</a>
+                        {{-- Navbar Layanan --}}
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Layanan</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="/room" class="dropdown-item">Comfort Room</a>
+                                <a href="/party" class="dropdown-item">Quality Food</a>
+                                <a href="/order" class="dropdown-item">Online Order</a>
+                                <a href="/chat" class="dropdown-item">24/7 Service</a>
+                            </div>
+                        </div>
+                        {{-- End Navbar Layanan --}}
                         <!-- <a href="/menu" class="nav-item nav-link">Menu</a> -->
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link active dropdown-toggle" data-bs-toggle="dropdown">Menu</a>
@@ -67,17 +76,8 @@
                                 <a href="/meeting" class="dropdown-item">Meeting</a>
                             </div>
                         </div>
-                        <!-- <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Halaman</a>
-                            <div class="dropdown-menu m-0">
-                                <a href="/reservasi" class="dropdown-item">Reservasi</a>
-                                <a href="timkami" class="dropdown-item">Tim Kami</a>
-                                <a href="/testimoni" class="dropdown-item">Testimoni</a>
-                            </div>
-                        </div> -->
-                        <!-- <a href="contact.html" class="nav-item nav-link">Hubungi</a> -->
                     </div>
-                    <a href="" class="btn btn-primary py-2 px-4">Pesan Sekarang </a>
+                    <a href="/login" class="btn btn-primary py-2 px-4">Login </a>
                 </div>
             </nav>
 
@@ -512,14 +512,7 @@
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                             &copy; <a class="border-bottom" href="#">Warung Millenial</a>, All Right Reserved. 
                         </div>
-                        <div class="col-md-6 text-center text-md-end">
-                            <div class="footer-menu">
-                                <a href="">Beranda</a>
-                                <a href="">Cookies</a>
-                                <a href="">Bantuan</a>
-                                <a href="">FQAs</a>
-                            </div>
-                        </div>
+                       
                     </div>
                 </div>
             </div>

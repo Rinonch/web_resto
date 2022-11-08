@@ -23,6 +23,21 @@ Route::post('/store',[PesananController::class,'store']);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/room',function() {
+    return view('/cf_room');
+});
+
+Route::get('/quality', function () {
+    return view('/quality');
+});
+
+Route::get('/order', function () {
+    return view('/order');
+});
+
+Route::get('/chat', function () {
+    return view('/chat');
+});
 
 Route::middleware(['auth'])->group(function(){
 
@@ -61,5 +76,6 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/meeting', function() {
         return view('/meeting');
     });
+    
     
 });

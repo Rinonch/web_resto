@@ -56,8 +56,17 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
                         <a href="/welcome" class="nav-item nav-link">Beranda</a>
-                        <!-- <a href="/about" class="nav-item nav-link">Tentang</a> -->
-                        <a href="/service" class="nav-item nav-link active">Layanan</a>
+                        {{-- Navbar Layanan --}}
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link active dropdown-toggle" data-bs-toggle="dropdown">Layanan</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="/room" class="dropdown-item">Comfort Room</a>
+                                <a href="/quality" class="dropdown-item">Quality Food</a>
+                                <a href="/order" class="dropdown-item">Online Order</a>
+                                <a href="/chat" class="dropdown-item">24/7 Service</a>
+                            </div>
+                        </div>
+                        {{-- End Navbar Layanan --}}
                         <!-- <a href="/menu" class="nav-item nav-link">Menu</a> -->
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Menu</a>
@@ -67,82 +76,49 @@
                                 <a href="/meeting" class="dropdown-item">Meeting</a>
                             </div>
                         </div>
-                        <!-- <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Halaman</a>
-                            <div class="dropdown-menu m-0">
-                                <a href="/reservasi" class="dropdown-item">Reservasi</a>
-                                <a href="timkami" class="dropdown-item">Tim Kami</a>
-                                <a href="/testimoni" class="dropdown-item">Testimoni</a>
-                            </div>
-                        </div> -->
-                        <!-- <a href="contact.html" class="nav-item nav-link">Hubungi</a> -->
                     </div>
-                    <a href="" class="btn btn-primary py-2 px-4">Pesan Sekarang </a>
+                    <a href="/login" class="btn btn-primary py-2 px-4">Login </a>
                 </div>
             </nav>
 
             <div class="container-xxl py-5 bg-dark hero-header mb-5">
                 <div class="container text-center my-5 pt-5 pb-4">
-                    <h1 class="display-3 text-white mb-3 animated slideInDown">Layanan</h1>
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">Comfort Room</h1>
                 </div>
             </div>
         </div>
         <!-- Navbar & Hero End -->
-
-
-        <!-- Service Start -->
+        
+        {{-- comfort room --}}
         <div class="container-xxl py-5">
             <div class="container">
-                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Layanan Kami</h5>
-                    <h1 class="mb-5">Telusuri Layanan Kami</h1>
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <a href="/room">
-                        <div class="service-item rounded pt-3">
-                            <div class="p-4">
-                                <i class="fa fa-3x fa-home text-primary mb-4"></i>
-                                <h5>Comfort Room</h5>
-                                <p>Ruang Bersih dan Sejuk Ada ACnya Bau Harum dan Ruang Estetik</p>
-                                
-                            </div>  
-                        </div>
-                    </a>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="service-item rounded pt-3">
-                            <div class="p-4">
-                                <i class="fa fa-3x fa-utensils text-primary mb-4"></i>
-                                <h5>Quality Food</h5>
-                                <p>Makanan Yang Disajikan Berkualitas Tinggi Dan Tersertifikasi Halal</p>
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="row g-3">
+                            <div class="col-6 text-start">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" src="img/about-1.jpg">
+                            </div>
+                            <div class="col-6 text-start">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.3s" src="img/about-2.jpg" style="margin-top: 25%;">
+                            </div>
+                            <div class="col-6 text-end">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s" src="https://www.nibble.id/uploads/restoran_di_jakarta_barat_yang_ada_private_room_10_aa51bcef30.jpg">
+                            </div>
+                            <div class="col-6 text-end">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s" src="https://cdn.medcom.id/images/library/images/gaya/dekor/dekorasi%20restoran%201.png">
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="service-item rounded pt-3">
-                            <div class="p-4">
-                                <i class="fa fa-3x fa-shopping-cart text-primary mb-4"></i>
-                                <h5>Online Order</h5>
-                                <p>Kami Tidak Menerima Pesanan Online. Kami Hanya Menerima Makan Di Tempat</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="service-item rounded pt-3">
-                            <div class="p-4">
-                                <i class="fa fa-3x fa-headset text-primary mb-4"></i>
-                                <h5>24/7 Service</h5>
-                                <p>Hubungi Kami Setiap Saat Tidak Fast Respond Dan Tidak Ramah</p>
-                            </div>
-                        </div>
+                    <div class="col-lg-6">
+                        <!-- <h5 class="section-title ff-secondary text-start text-primary fw-normal">Tentang Kami</h5> -->
+                        <h1 class="mb-4">Comfort Room</h1>
+                        <p class="mb-4">Kami memiliki banyak ruangan yang tersedia. Tiap ruangan kita desain untuk senyaman mungkin.</p>
+                        <p class="mb-4">Disetiap ruangan dilengkapi oleh berbagai fasilitas seperti toilet, ac, meja, kursi.</p>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Service End -->
         
-
         <!-- Footer Start -->
         <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
             <div class="container py-5">
@@ -190,14 +166,6 @@
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                             &copy; <a class="border-bottom" href="#">Warung Millenial</a>, All Right Reserved. 
 							
-                        </div>
-                        <div class="col-md-6 text-center text-md-end">
-                            <div class="footer-menu">
-                                <a href="">Beranda</a>
-                                <a href="">Cookies</a>
-                                <a href="">Bantuan</a>
-                                <a href="">FQAs</a>
-                            </div>
                         </div>
                     </div>
                 </div>
