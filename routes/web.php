@@ -75,7 +75,5 @@ Route::middleware(['auth'])->group(function(){
     
     Route::get('/meeting', function() {
         return view('/meeting');
-    });
-    
-    
+    }); 
 });
